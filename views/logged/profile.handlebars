@@ -1,0 +1,29 @@
+<div class="">
+    <h2>Perfil de {{nome}}</h2>
+    <hr>
+    
+    <form method="POST" action="">
+        <div class="row" style="justify-content: space-evenly;margin:20px">
+            <label for="palavra" >A palavra:</label>
+            <input type="text" class="form-control" name="palavra" style="width: 200px;" required>
+            <label for="idioma">No idioma:</label>
+            <input type="text" class="form-control" name="idioma" style="width: 200px;" required>
+            <label for="palavratraduzida">Fica:</label>
+            <input type="text" class="form-control" name="palavraTraduzida" style="width: 200px;" required>
+            <label for="idiomatraducao">No idioma:</label>
+            <input type="text" class="form-control" name="idiomaTraducao" style="width: 200px;" required>
+        </div>
+        <button type="submit" class="btn btn-primary" >Cadastrar card</button>
+    </form>
+    <hr>
+    <p>Quantidade de <strong>Cards</strong>: {{cards.length}}</p>
+    <div class="row">       
+        <div class="col-12"> 
+                {{#each cards}}
+                    <p>Palavra: <strong>{{this.palavra}}</strong> está no idioma: <strong>{{this.idioma}}</strong> e sua tradução para <strong>{{this.idiomaTraducao}}</strong> é <strong>{{this.palavraTraduzida}}</strong></p>
+                    <hr>
+                {{/each}}
+        </div>
+    </div>
+        
+</div>

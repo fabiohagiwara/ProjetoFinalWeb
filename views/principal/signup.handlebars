@@ -1,0 +1,33 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+    
+{{/each}}
+<div class="row">   
+    <form class="col-6" style="margin-top: 100px;" action="" method="post" >
+        <h2>Registre-se!</h2>
+        <hr>
+        <div class="form-group">
+            <label for="signupUsername">Usuário</label>
+            <input type="text" maxlength="20" minlength="6" class="form-control" name="signupUsername" required>  
+        </div>
+        <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" class="form-control" name="signupEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="signupPassword">Senha</label>
+            <input type="password" class="form-control" name="signupPassword" required>
+        </div>
+        <div class="form-group">
+            <label for="signupPassword2">Confirmar senha</label>
+            <input type="password" class="form-control" name="signupPassword2" required>
+            <span id="message"></span>
+        </div>      
+        <button type="submit" class="btn btn-outline-primary">Registrar!</button>
+        
+    </form>
+    <div class="col-6" style="margin-top: 100px">
+        <img src="img/logo2.png" alt="logo" style="width: 300px;height:300px">
+    </div>
+</div>
